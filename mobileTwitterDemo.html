@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="HandheldFriendly" content="true" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="/js/dojo/dojox/mobile/themes/iphone/iphone.css" rel="stylesheet" />
+	<title>Mobile Twitter Demo</title>
+</head>
+<body>
+<div data-dojo-type="dojox.mobile.View">
+	<div id="searchBox" data-dojo-type="dojox.mobile.RoundRect" data-dojo-props='shadow:true'>
+		<input id="search" data-dojo-type="dojox.mobile.TextBox" selectOnClick="true" placeHolder="twitter search">
+		<button id="searchButton" data-dojo-type="dojox.mobile.Button">Search</button>
+	</div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/dojo/1.8.3/dojo/dojo.js" data-dojo-config="async: true"></script>
+<script src="http://download.dojotoolkit.org/release-1.9.0a1/dojo-release-1.9.0a1/dojo/request/script.js"></script>
+<script src="mobileTwitterDemo.js"></script>
+<script type="text/javascript">
+//Load the widget parser and mobile base
+require([
+		"dojox/mobile/parser",
+		"dojox/mobile/deviceTheme",
+		"dojox/mobile/compat",
+		"dojox/mobile",
+		"dojox/mobile/View",
+		"dojox/mobile/RoundRect",
+		"dojox/mobile/TextBox",
+		"dojox/mobile/EdgeToEdgeList",
+		"dojox/mobile/ListItem",
+		"dojox/mobile/Button"
+	],
+	function(parser, deviceTheme) {
+
+		// Parse the page for widgets!
+		parser.parse();
+	}
+);
+</script>
+</body>
+</html>
