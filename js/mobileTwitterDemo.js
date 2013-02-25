@@ -40,6 +40,7 @@ require([
 						$(list.containerNode).appendTo('body');
 						array.forEach(results, function(obj){
 							item = new ListItem({
+								variableHeight: true,
 								icon: location.protocol == 'http:' ? obj.profile_image_url : obj.profile_image_url_https
 							});
 							$(item.labelNode)
