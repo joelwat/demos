@@ -2,6 +2,7 @@
 
 #list > .mblListItem{
 	height: auto;
+    background-color: white;
 }
 
 #list > .mblListItem > .mblListItemLabel{
